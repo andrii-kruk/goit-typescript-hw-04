@@ -14,7 +14,7 @@ type MenuSelected = {
 };
 
 type MenuAction = {
-  onSelectedMenu: ({}: SelectedMenu) => void;
+  onSelectedMenu: (menu: SelectedMenu) => void;
 };
 
 type PropsProvider = {

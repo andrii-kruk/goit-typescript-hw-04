@@ -5,17 +5,11 @@ type ObserverProps = {
   onContentEndVisible: () => void;
 };
 
-type Options = {
-  rootMargin: string;
-  threshold: number;
-  root: null;
-};
-
 export function Observer({ children, onContentEndVisible }: ObserverProps) {
   const endContentRef: RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
-    const options: Options = {
+    const options: IntersectionObserverInit = {
       rootMargin: "0px",
       threshold: 1.0,
       root: null,
